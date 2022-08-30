@@ -1,4 +1,4 @@
-<?php require 'includes/newClass.php'?>
+<?php require 'includes/newClasses.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
