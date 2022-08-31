@@ -19,7 +19,7 @@ abstract class User{
     }
 
 
-    //getters
+    //getters & setters
     public function getfName(){return $this->fName;}
     public function getlName(){return $this->lName;}
     public function getAge(){return $this->age;}
@@ -30,6 +30,7 @@ class Employee extends User{
 
     //property for employee
     private $role = "";
+    private static $race = "HUMAN";
 
     //constructor
     public function __construct($fName, $lName, $age, $role){ 
@@ -42,11 +43,41 @@ class Employee extends User{
         echo($this->__toString());
     }
 
-    //getter
+    //getter & getter
     public function getRole(){return $this->role;}
+    public static function getRace(){return self::$race;}
+    public static function setRace($race){self::$race = $race;}
 
     public function __toString(){
         return "<strong>EMPLOYEE</strong><br>ID: " . parent::getId() . 
-        "<br>First Name: " . parent:: getfName() . "<br>Last Name: " . parent:: getlName() . "<br>Role: " . $this->role . "<br><br>"; 
+        "<br>First Name: " . parent:: getfName() . "<br>Last Name: " . parent:: getlName() . "<br>Role: " . $this->role . "<br>Race: " . self::getRace() . "<br><br>"; 
+    }
+}
+
+class Alien extends User{
+
+    //property for employee
+    private $role = "";
+    private static $race = "Alien";
+
+    //constructor
+    public function __construct($fName, $lName, $age, $role){ 
+        parent::__construct($fName, $lName, $age);
+        $this->role = $role;
+    }
+
+    //destructor
+    public function __destruct(){
+        echo($this->__toString());
+    }
+
+    //getters & setters
+    public function getRole(){return $this->role;}
+    public static function getRace(){return self::$race;}
+    public static function setRace($race){self::$race = $race;}
+
+    public function __toString(){
+        return "<strong>ALIEN</strong><br>ID: " . parent::getId() . 
+        "<br>First Name: " . parent:: getfName() . "<br>Last Name: " . parent:: getlName() . "<br>Role: " . $this->role . "<br>Race: " . self::getRace() . "<br><br>"; 
     }
 }
