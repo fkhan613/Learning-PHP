@@ -1,4 +1,6 @@
-<?php require 'includes/newClasses.php'?>
+<?php 
+require_once 'includes/autoloader.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +11,12 @@
 </head>
 <body>
     <?php 
-        $John = new Employee("John", "Smith", 45, "Software Engineer");
-        $James = new Employee("James", "Smith", 69, "Software Engineer II");
-        $Aiden = new Employee("Aiden", "Smith", 15, "Full Stack Engineer");
-        $Yaba = new Alien("Yaba", "Doo", 99999, "Technical Areospace Engineer");
+        $John = new User\Employee( "John", "Smith", 45, "Software Engineer");
+        $James = new User\Employee("James", "Smith", 69, "Software Engineer II");
+        $Aiden = new User\Employee("Aiden", "Smith", 15, "Full Stack Engineer");
+        $Yaba = new User\Alien("Yaba", "Doo", 99999, "Technical Areospace Engineer");
+        $Person = new User\Person("Im a person", 69);
+        echo $Person->__toString();
     ?>
 </body>
 </html>
