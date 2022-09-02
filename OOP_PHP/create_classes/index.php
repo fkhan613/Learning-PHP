@@ -1,5 +1,5 @@
 <?php 
-require_once 'includes/autoloader.inc.php';
+require_once '../calculator_app/includes/autoloader.inc.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
