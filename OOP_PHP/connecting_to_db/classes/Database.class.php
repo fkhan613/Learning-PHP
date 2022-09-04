@@ -7,7 +7,7 @@ class Database{
     private $pwd = "farhan12345";
     private $dbName = "login_register_system";
 
-    protected function connect(){
+    public function connect(){
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbName;
         $PDO = new PDO($dsn, $this->user, $this->pwd);
         $PDO->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

@@ -8,6 +8,9 @@
     <title>Connecting to DB Using PDO</title>
 </head>
 <body>
-    
+    <?php
+    $db = new Database();
+    $db->connect();
+    ?>
 </body>
 </html>
