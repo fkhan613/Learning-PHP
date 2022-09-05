@@ -9,8 +9,8 @@
 </head>
 <body>
     <?php
-    $db = new Database();
-    $db->connect();
+         $test = new Test();
+         $test->getUsers();
     ?>
 </body>
 </html>
