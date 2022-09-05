@@ -9,7 +9,6 @@
 </head>
 <body>
     <?php
-
         $userObj = new UsersView();
         echo $userObj->showUsers("David");
         $newObj = new UsersContr();
