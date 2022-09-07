@@ -1,0 +1,2 @@
+<?
+include "autoloader.inc.php";

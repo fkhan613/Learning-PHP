@@ -17,7 +17,7 @@
         <img src="img/bg.svg" />
       </div>
       <div class="login-content">
-        <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> method="POST" >
+        <form action="includes/Register.inc.php" method="POST" >
           <img src="img/avatar.svg" />
           <h2 class="title">Register</h2>
           <div class="input-div one">
