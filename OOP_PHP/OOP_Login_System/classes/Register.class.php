@@ -27,4 +27,11 @@ class Register extends Database {
         
         return $isClear;
     }
+
+    //insert user into the database
+    protected function insertUser($fName, $lName, $email, $password){
+
+        //prepared statement
+
+    }
 }
